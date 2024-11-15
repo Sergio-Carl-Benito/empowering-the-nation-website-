@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="javascript.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowering the Nation | Six-Week Courses</title>
+    <style>
+ .course-box {
+            display: none;
+        }
+
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <link rel="javascript" href="javascript.js">
+        <a href="Index.html"><img src="_image/Empowering the Nation(1).jpg" alt="Logo"></a>
+        <h1>Empowering the Nation</h1>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Summary-6month-courses.html">Six-Month Course Overview</a></li>
+                <li><a href="Summary-6weeks-courses.html">Six-Week Course Overview</a></li>
+                <li><a href="Calculate-totalfees.html">Fee Calculation</a></li>
+                <li><a href="Contact-us.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- Back Button -->
+<button class="back-button" onclick="goBack()">← Back</button>
+    <div class="container">
+        <h2>Six-Week Courses</h2>
+        <!-- Dropdown to select courses -->
+        <label for="courseSelect">Select a course:</label>
+        <select id="courseSelect">
+            <option value="">-- Select a Course --</option>
+            <option value="childminding">Child Minding</option>
+            <option value="cooking">Cooking</option>
+            <option value="gardening">Gardening</option>
+        </select>
+
+        <!-- Course boxes -->
+        <div class="courses">
+            <div class="course-box" id="childminding">
+                <h3>Child Minding</h3>
+                <p>Learn the skills needed to care for children of various ages.</p>
+                <a href="child-minding-course.html">
+                    <button>View Details</button>
+                </a>
+            </div>
+            <div class="course-box" id="cooking">
+                <h3>Cooking</h3>
+                <p>Develop skills to prepare nutritious meals for families.</p>
+                <a href="cooking-course.html">
+                    <button>View Details</button>
+                </a>
+            </div>
+            <div class="course-box" id="gardening">
+                <h3>Gardening</h3>
+                <p>Gain practical knowledge for maintaining domestic gardens.</p>
+                <a href="garden-maintenance-course.html">
+                    <button>View Details</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="left">
+            <a href="About Us.html">About Us</a> | 
+            <a href="Calculate-totalfees.html">Fees Calculation</a> | 
+            <a href="Contact-us.html">Contact Us</a>
+        </div>
+        <div class="footer-center">
+            Phones: (012) 345-6789<br>
+            Email: contact@Empoweringnation.com<br>
+            Address: 123 Avenue Street, Johannesburg, SA
+        </div>
+        <div class="right">
+            &copy; 2024 Empowering the Nation
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for dropdown functionality
+        document.getElementById('courseSelect').addEventListener('change', function() {
+            // Get selected value
+            const selectedCourse = this.value;
+
+            // Hide all course boxes
+            const courseBoxes = document.querySelectorAll('.course-box');
+            courseBoxes.forEach(box => box.style.display = 'none');
+
+            // Show the selected course box if a valid option is selected
+            if (selectedCourse) {
+                const selectedBox = document.getElementById(selectedCourse);
+                if (selectedBox) {
+                    selectedBox.style.display = 'block';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

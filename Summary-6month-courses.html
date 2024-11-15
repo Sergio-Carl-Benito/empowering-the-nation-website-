@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="javascript.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowering the Nation | Six-Month Courses</title>
+    <style>
+        .course-box {
+            display: none; /* Hide all course boxes by default */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <link rel="javascript" href="javascript.js">
+        <a href="Index.html"><img src="_image/Empowering the Nation(1).jpg" alt="Logo"></a>
+        <h1>Empowering the Nation</h1>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Summary-6month-courses.html">Six-Month Course Overview</a></li>
+                <li><a href="Summary-6weeks-courses.html">Six-Week Course Overview</a></li>
+                <li><a href="Calculate-totalfees.html">Fee Calculation</a></li>
+                <li><a href="Contact-us.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- Back Button -->
+<button class="back-button" onclick="goBack()">← Back</button>
+    <div class="container">
+        <h2>Six-Month Courses</h2>
+        <label for="courseSelect">Select a course:</label>
+        <select id="courseSelect">
+            <option value="">-- Select a Course --</option>
+            <option value="firstAid">First Aid</option>
+            <option value="sewing">Sewing</option>
+            <option value="landscaping">Landscaping</option>
+            <option value="lifeSkills">Life Skills</option>
+        </select>
+
+        <div class="courses">
+            <div class="course-box" id="firstAid">
+                <h3>First Aid</h3>
+                <p>Learn the basics of first aid to manage emergencies.</p>
+                <a href="first-aid-course.html">
+                    <button>View Details</button>
+                </a>
+            </div>
+            <div class="course-box" id="sewing">
+                <h3>Sewing</h3>
+                <p>Master sewing for repairs and clothing creation.</p>
+                <a href="sewing-course.html">
+                    <button>View Details</button>
+                </a>
+            </div>
+            <div class="course-box" id="landscaping">
+                <h3>Landscaping</h3>
+                <p>Develop skills for designing and maintaining gardens.</p>
+                <a href="landscaping-course.html">
+                    <button>View Details</button>
+                </a>
+            </div>
+            <div class="course-box" id="lifeSkills">
+                <h3>Life Skills</h3>
+                <p>Acquire essential skills for navigating daily life.</p>
+                <a href="life-skill-course.html">
+                    <button>View Details</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="left">
+            <a href="About Us.html">About Us</a> | 
+            <a href="Calculate-totalfees.html">Fees Calculation</a> | 
+            <a href="Contact-us.html">Contact Us</a>
+        </div>
+        <div class="footer-center">
+            Phones: (012) 345-6789<br>
+            Email: contact@Empoweringnation.com<br>
+            Address: 123 Avenue Street, Johannesburg, SA
+        </div>
+        <div class="right">
+            &copy; 2024 Empowering the Nation
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('courseSelect').addEventListener('change', function() {
+            // Get the selected value
+            const selectedCourse = this.value;
+
+            // Hide all course boxes
+            const courseBoxes = document.querySelectorAll('.course-box');
+            courseBoxes.forEach(box => box.style.display = 'none');
+
+            // Show the selected course box if a valid option is selected
+            if (selectedCourse) {
+                const selectedBox = document.getElementById(selectedCourse);
+                if (selectedBox) {
+                    selectedBox.style.display = 'block';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
